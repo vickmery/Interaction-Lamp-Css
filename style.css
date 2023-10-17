@@ -1,0 +1,64 @@
+.lamp {
+    position: relative;
+    margin: 0 auto;
+    width: 0.7rem;
+    height: 10rem;
+    background-image: linear-gradient(#e119b2b3, #0df059b3),
+      linear-gradient(#08bdffb3, #6817ffb3), linear-gradient(#c81818b3, #badcf0b3);
+    background-repeat: no-repeat;
+    background-size: 0.15rem 8rem, 0.4rem 0.8rem, 0.7rem 2rem;
+    background-position: 50% 0, 0.14rem 8rem, 0 8.8rem;
+  }
+  .lamp:before,
+  .lamp:after {
+    content: "";
+    position: absolute;
+  }
+  .lamp:before {
+    left: -1.65rem;
+    bottom: -4rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: #f7f704eb;
+    box-shadow: inset 2px -2px 10px #ffffff12;
+    transition: all 0.75s;
+  }
+  .ligth,
+  .ligth:before {
+    position: absolute;
+  }
+  
+  .ligth {
+    top: 10.05rem;
+    left: 0.3rem;
+    width: 0;
+    height: 1.5rem;
+    border-right: 0.2rem solid #ffffff0d;
+  }
+  
+  .ligth:before {
+    content: "";
+    top: 1.5rem;
+    left: -0.55rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    border: 0.2rem solid #ffffff0d;
+    box-shadow: 0px 0px 50px #ffffff00;
+  }
+  .switch {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    top: 16.5rem;
+    z-index: 2;
+    appearance: none;
+  }
+  input:checked ~ .lamp:before {
+    background: #ffffff;
+    box-shadow: 0px 2px 10px #ffffffcc, 0px 5px 50px #ffffffcc,
+      0px 8px 80px #ffffff99, 0px 8px 120px #ffffff99;
+  }
+  
